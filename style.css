@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: orange; /* Color anaranjado */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    color: #080808; /* Color de texto blanco */
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.resultado-busqueda {
+    position: absolute;
+    right: 20px; /* Espacio desde el borde derecho */
+    top: 10px; /* Espacio desde el borde superior */
+    background: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.centered-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre filas */
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center; /* Centrar los productos */
+    gap: 30px; /* Espacio entre productos */
+    animation: move-left 10s linear infinite; /* Animación hacia la izquierda */
+}
+
+.gallery-row.reverse {
+    animation: move-right 10s linear infinite; /* Animación hacia la derecha para la fila inversa */
+}
+
+.producto {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+.producto:hover {
+    transform: scale(2.2); /* Efecto de aumento al pasar el cursor */
+}
+
+.producto-imagen {
+    width: 100%; /* Imágenes escalables */
+    height: auto; /* Mantener proporciones */
+    max-height: 50px; /* Limitar altura */
+}
+
+footer {
+    background: orange; /* Color anaranjado */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    color: #030303; /* Color de texto blanco */
+}
+
+/* Animaciones para el movimiento de las filas */
+@keyframes move-left {
+    0% { transform: translateX(100%); } /* Comenzar desde el lado derecho */
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes move-right {
+    0% { transform: translateX(-100%); } /* Comenzar desde el lado izquierdo */
+    100% { transform: translateX(100%); }
+}
