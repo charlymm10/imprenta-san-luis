@@ -5,16 +5,20 @@ body {
 
 header {
     background: orange; /* Color anaranjado */
-    padding: 10px;
-    text-align: left;
+    padding: 20px; /* Mayor espacio para el encabezado */
+    text-align: center;
     position: relative;
     color: #080808; /* Color de texto negro */
 }
-.logo {
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantener proporciones */
-    vertical-align: middle; /* Alinear verticalmente con el texto */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+
+header .logo {
+    max-width: 100%; /* Asegura que el logo se ajuste al contenedor */
+    height: auto; /* Mantener proporciones del logo */
+    margin-bottom: 10px; /* Espacio entre el logo y el título */
+}
+
+h1 {
+    margin: 0; /* Eliminar margen por defecto del h1 */
 }
 
 .search-form {
@@ -32,6 +36,7 @@ header {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
 }
 
 .centered-content {

@@ -9,18 +9,18 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<header>
-    <img src="logo_imprenta.png" alt="Logo" class="logo">
-    <h1>Imprenta San Luis</h1>
-    <form class="search-form" id="searchForm" onsubmit="return buscarPedido(event);">
-        <label for="pedidoId">ID de Pedido:</label>
-        <input type="text" id="pedidoId" name="pedidoId" required pattern="^[0-9]+$" title="Solo se permiten números.">
-        <button type="submit">Buscar</button>
-    </form>
-    <div id="resultadoBusqueda" class="resultado-busqueda">
-        <p id="estadoPedido">Resultado: -</p>
-    </div>
-</header>
+    <header>
+        <img src="logo_imprenta.png" alt="Logo" class="logo">
+        <h1>Imprenta San Luis</h1>
+        <form class="search-form" id="searchForm" onsubmit="return buscarPedido(event);">
+            <label for="pedidoId">ID de Pedido:</label>
+            <input type="text" id="pedidoId" name="pedidoId" required pattern="^[0-9]+$" title="Solo se permiten números.">
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="resultadoBusqueda" class="resultado-busqueda">
+            <p id="estadoPedido">Resultado: -</p>
+        </div>
+    </header>
 <main class="centered-content">
     <section id="productos">
         <h2>Productos</h2>
