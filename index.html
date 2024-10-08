@@ -165,27 +165,6 @@ async function buscarPedido(event) {
         estadoPedidoElement.textContent = `Error: ${error.message}`;
     }
 }
-
-// Selecciona todas las filas de la galería
-const galleryRows = document.querySelectorAll('.gallery-row');
-galleryRows.forEach(row => {
-    row.addEventListener('mousedown', () => {
-        row.style.animationPlayState = 'paused'; // Pausa la animación
-    });
-
-    row.addEventListener('mouseup', () => {
-        row.style.animationPlayState = 'running'; // Reanuda la animación
-    });
-
-    // Para dispositivos táctiles
-    row.addEventListener('touchstart', () => {
-        row.style.animationPlayState = 'paused'; // Pausa la animación
-    });
-
-    row.addEventListener('touchend', () => {
-        row.style.animationPlayState = 'running'; // Reanuda la animación
-    });
-});
 </script>
 <footer>
     <p>© 2024 Imprenta San Luis. Todos los derechos reservados.</p>
