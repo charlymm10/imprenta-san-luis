@@ -1,3 +1,4 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
 }
@@ -7,7 +8,7 @@ header {
     padding: 10px;
     text-align: center;
     position: relative;
-    color: #080808; /* Color de texto blanco */
+    color: #080808; /* Color de texto negro */
 }
 
 .search-form {
@@ -57,13 +58,13 @@ header {
 }
 
 .producto:hover {
-    transform: scale(2.2); /* Efecto de aumento al pasar el cursor */
+    transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
 }
 
 .producto-imagen {
     width: 100%; /* Imágenes escalables */
     height: auto; /* Mantener proporciones */
-    max-height: 50px; /* Limitar altura */
+    max-height: 100px; /* Limitar altura */
 }
 
 footer {
@@ -71,7 +72,7 @@ footer {
     padding: 10px;
     text-align: center;
     position: relative;
-    color: #030303; /* Color de texto blanco */
+    color: #030303; /* Color de texto negro */
 }
 
 /* Animaciones para el movimiento de las filas */
