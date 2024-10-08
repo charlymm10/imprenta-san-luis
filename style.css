@@ -6,19 +6,23 @@ body {
 header {
     background: orange; /* Color anaranjado */
     padding: 20px; /* Mayor espacio para el encabezado */
-    text-align: center;
+    text-align: left; /* Cambiar a izquierda */
     position: relative;
     color: #080808; /* Color de texto negro */
 }
 
 header .logo {
-    max-width: 100%; /* Asegura que el logo se ajuste al contenedor */
+    max-width: 80px; /* Cambiar tamaño máximo del logo */
     height: auto; /* Mantener proporciones del logo */
-    margin-bottom: 10px; /* Espacio entre el logo y el título */
+    margin-right: 20px; /* Espacio a la derecha del logo */
+    vertical-align: middle; /* Alinear verticalmente con el título */
+    display: inline-block; /* Asegura que el logo y el título estén en la misma línea */
 }
 
 h1 {
     margin: 0; /* Eliminar margen por defecto del h1 */
+    display: inline-block; /* Asegura que el título esté en la misma línea que el logo */
+    vertical-align: middle; /* Alinear verticalmente con el logo */
 }
 
 .search-form {
