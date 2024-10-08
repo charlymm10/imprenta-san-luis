@@ -12,13 +12,19 @@
 <header>
     <img src="logo imprenta.png" alt="Logo" class="logo">
     <h1>Imprenta San Luis</h1>
-    <form class="search-form" id="searchForm" onsubmit="return buscarPedido(event);">
+    <form class="search-form" method="GET" action="consulta_pagina_web.php" onsubmit="return buscarPedido(event);">
         <label for="pedidoId">ID de Pedido:</label>
         <input type="text" id="pedidoId" name="pedidoId" required>
         <button type="submit">Buscar</button>
     </form>
     <div id="resultadoBusqueda" class="resultado-busqueda">
-        <p id="estadoPedido">Resultado: -</p>
+        <?php
+            if (isset($_GET['estado'])) {
+                echo '<p>Estado del Pedido: ' . htmlspecialchars($_GET['estado']) . '</p>';
+            } else {
+                echo '<p>Resultado: -</p>';
+            }
+        ?>
     </div>
 </header>
 <main class="centered-content">
@@ -139,22 +145,6 @@
 </footer>
 
 <script>
-async function buscarPedido(event) {
-    event.preventDefault(); // Evita que el formulario se envíe de forma convencional
-
-    const pedidoId = document.getElementById('pedidoId').value; // Obtiene el ID del pedido
-    const response = await fetch(`consulta_pagina_web2.php?pedidoId=${pedidoId}`); // Realiza la solicitud a PHP
-    const data = await response.json(); // Convierte la respuesta a JSON
-
-    // Actualiza el contenido del elemento con el estado del pedido
-    const estadoPedidoElement = document.getElementById('estadoPedido');
-    if (data.estado) {
-        estadoPedidoElement.textContent = `Pedido: ${data.estado}`;
-    } else {
-        estadoPedidoElement.textContent = `Error: ${data.error}`;
-    }
-}
-
 // Selecciona todas las filas de la galería
 const galleryRows = document.querySelectorAll('.gallery-row');
 const productos = document.querySelectorAll('.producto');
@@ -174,6 +164,19 @@ galleryRows.forEach(row => {
     });
 
     row.addEventListener('touchend', () => {
+        row.style.animationPlayState = 'running'; // Reanuda la animación
+    });
+});
+
+// Agrega eventos a cada producto para pausar la animación al pasar el cursor
+productos.forEach(producto => {
+    producto.addEventListener('mouseenter', () => {
+        const row = producto.closest('.gallery-row');
+        row.style.animationPlayState = 'paused'; // Pausa la animación
+    });
+
+    producto.addEventListener('mouseleave', () => {
+        const row = producto.closest('.gallery-row');
         row.style.animationPlayState = 'running'; // Reanuda la animación
     });
 });
