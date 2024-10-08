@@ -10,8 +10,16 @@
 </head>
 <body>
 <header>
-    <img src="logo imprenta.png" alt="Logo" class="logo">
-    <h1>Imprenta San Luis</h1>
+    <div class="contacto">
+        <p>Av Jesús Agustín Castro Norte 313,</p>
+        <p>34700 Guadalupe Victoria, Durango · 08 km</p>
+        <p>Teléfono: 676 882 0304</p>
+        
+    </div>
+    <div class="header-content">
+        <img src="logo imprenta.png" alt="Logo" class="logo">
+        <h1>Imprenta San Luis</h1>
+    </div>
     <form class="search-form" id="searchForm" onsubmit="return buscarPedido(event);">
         <label for="pedidoId">ID de Pedido:</label>
         <input type="text" id="pedidoId" name="pedidoId" required pattern="^[0-9]+$" title="Solo se permiten números.">

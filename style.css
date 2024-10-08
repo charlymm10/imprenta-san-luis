@@ -5,9 +5,15 @@ body {
 header {
     background: orange; /* Color anaranjado */
     padding: 10px;
-    text-align: center;
-    position: relative;
-    color: #080808; /* Color de texto blanco */
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Cambiar a columna para centrar */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.header-content {
+    display: flex; /* Usar flexbox para alinear logo y título */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
 }
 
 .search-form {
@@ -15,6 +21,99 @@ header {
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+}
+
+.logo {
+    width: 80px; /* Cambia este valor según el tamaño que desees */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: -60px;
+    margin-bottom: 20px; /* Espacio entre el logo y el título */
+    margin-right: 30px; /* Espacio a la derecha del logo para separarlo del título */
+   
+}
+
+h1 {
+    margin: -60px 0 20px; /* Ajusta el margen superior según sea necesario */
+    font-size: 74px; /* Ajusta el tamaño de la fuente si es necesario */
+    color: #fff; /* Cambia el color del texto si es necesario */
+    text-shadow: 
+        0 0 5px #ffcc00, /* Resplandor amarillo */
+        0 0 10px #ffcc00, 
+        0 0 15px #ffcc00,
+        0 0 20px #ffcc00,
+        0 0 25px #000000, /* Agrega más capas de brillo para dar efecto 3D */
+        2px 2px 0 #030303, /* Efecto 3D */
+        4px 4px 0 #010101; /* Efecto 3D adicional */
+    animation: brillar 2.5s infinite alternate; /* Animación de brillo */
+}
+
+@keyframes brillar {
+    from {
+        text-shadow: 
+            0 0 5px #ffcc00,
+            0 0 10px #ffcc00, 
+            0 0 15px #ffcc00,
+            0 0 20px #ffcc00,
+            0 0 25px #ffcc00,
+            2px 2px 0 #ffcc00,
+            4px 4px 0 #080808; /* Efecto 3D en el inicio */
+    }
+    to {
+        text-shadow: 
+            0 0 15px #ffcc00,
+            0 0 20px #ffcc00, 
+            0 0 25px #ffcc00,
+            0 0 30px #ffcc00,
+            0 0 35px #ffcc00,
+            2px 2px 0 #ffcc00,
+            4px 4px 0 #070707; /* Efecto 3D al final */
+    }
+}
+
+.contacto {
+    text-align: left; /* Alinear texto a la izquierda */
+    color: #030303; /* Color del texto */
+    margin-right: auto; /* Para empujar el resto hacia la derecha */
+    display: flex;
+    font-weight: bold; /* Hace el texto más grueso */
+    flex-direction: column; /* Mostrar el teléfono y la dirección en columnas */
+    text-shadow: 
+    0 0 5px #ffcc00, /* Resplandor amarillo */
+    0 0 10px #ffcc00, 
+    0 0 15px #ffcc00,
+    0 0 20px #ffcc00,
+    0 0 25px #000000, /* Agrega más capas de brillo para dar efecto 3D */
+    2px 2px 0 #030303, /* Efecto 3D */
+    3px 3px 0 #010101; /* Efecto 3D adicional */
+animation: brillar 0.5s infinite alternate; /* Animación de brillo */
+}
+
+@keyframes brillar {
+from {
+    text-shadow: 
+        0 0 5px #ffcc00,
+        0 0 10px #ffcc00, 
+        0 0 15px #ffcc00,
+        0 0 20px #ffcc00,
+        0 0 25px #ffcc00,
+        2px 2px 0 #ffcc00,
+        3px 3px 0 #080808; /* Efecto 3D en el inicio */
+}
+to {
+    text-shadow: 
+        0 0 15px #ffcc00,
+        0 0 20px #ffcc00, 
+        0 0 25px #ffcc00,
+        0 0 30px #ffcc00,
+        0 0 35px #ffcc00,
+        2px 2px 0 #ffcc00,
+        3px 3px 0 #070707; /* Efecto 3D al final */
+}
+}
+
+.contacto p {
+    margin: 0; /* Eliminar márgenes del párrafo */
+    font-size: 14px; /* Ajustar el tamaño de fuente según sea necesario */
 }
 
 .resultado-busqueda {
@@ -71,7 +170,7 @@ footer {
     padding: 10px;
     text-align: center;
     position: relative;
-    color: #030303; /* Color de texto blanco */
+    color: #030303; /* Color de texto */
 }
 
 /* Animaciones para el movimiento de las filas */
