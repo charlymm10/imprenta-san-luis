@@ -1,24 +1,13 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
 }
 
 header {
     background: orange; /* Color anaranjado */
-    padding: 20px; /* Mayor espacio para el encabezado */
+    padding: 10px;
     text-align: center;
     position: relative;
-    color: #080808; /* Color de texto negro */
-}
-
-header .logo {
-    max-width: 100%; /* Asegura que el logo se ajuste al contenedor */
-    height: auto; /* Mantener proporciones del logo */
-    margin-bottom: 10px; /* Espacio entre el logo y el título */
-}
-
-h1 {
-    margin: 0; /* Eliminar margen por defecto del h1 */
+    color: #080808; /* Color de texto blanco */
 }
 
 .search-form {
@@ -36,7 +25,6 @@ h1 {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    z-index: 1; /* Asegura que esté por encima de otros elementos */
 }
 
 .centered-content {
@@ -69,13 +57,13 @@ h1 {
 }
 
 .producto:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+    transform: scale(2.2); /* Efecto de aumento al pasar el cursor */
 }
 
 .producto-imagen {
     width: 100%; /* Imágenes escalables */
     height: auto; /* Mantener proporciones */
-    max-height: 100px; /* Limitar altura */
+    max-height: 50px; /* Limitar altura */
 }
 
 footer {
@@ -83,7 +71,7 @@ footer {
     padding: 10px;
     text-align: center;
     position: relative;
-    color: #030303; /* Color de texto negro */
+    color: #030303; /* Color de texto blanco */
 }
 
 /* Animaciones para el movimiento de las filas */
