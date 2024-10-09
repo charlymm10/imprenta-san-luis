@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #fff; /* Color de fondo de la página */
 }
 
 header {
@@ -8,6 +9,7 @@ header {
     display: flex; /* Usar flexbox para alinear el contenido */
     flex-direction: column; /* Cambiar a columna para centrar */
     align-items: center; /* Centrar horizontalmente */
+    color: #fff; /* Color del texto en el encabezado */
 }
 
 .header-content {
@@ -29,13 +31,12 @@ header {
     margin: -60px;
     margin-bottom: 20px; /* Espacio entre el logo y el título */
     margin-right: 30px; /* Espacio a la derecha del logo para separarlo del título */
-   
 }
 
 h1 {
     margin: -60px 0 20px; /* Ajusta el margen superior según sea necesario */
     font-size: 74px; /* Ajusta el tamaño de la fuente si es necesario */
-    color: #fff; /* Cambia el color del texto si es necesario */
+    color: #fff; /* Cambia el color del texto a blanco */
     text-shadow: 
         0 0 5px #ffcc00, /* Resplandor amarillo */
         0 0 10px #ffcc00, 
@@ -72,7 +73,7 @@ h1 {
 
 .contacto {
     text-align: left; /* Alinear texto a la izquierda */
-    color: #030303; /* Color del texto */
+    color: #fff; /* Cambiar el color del texto a blanco */
     margin-right: auto; /* Para empujar el resto hacia la derecha */
     display: flex;
     font-weight: bold; /* Hace el texto más grueso */
@@ -82,6 +83,7 @@ h1 {
 .contacto p {
     margin: 0; /* Eliminar márgenes del párrafo */
     font-size: 14px; /* Ajustar el tamaño de fuente según sea necesario */
+    color: #fff; /* Cambiar el color del texto a blanco */
 }
 
 .resultado-busqueda {
@@ -92,23 +94,25 @@ h1 {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: #030303; /* Color del texto dentro del resultado de búsqueda */
 }
 
 .centered-content {
     text-align: center;
     margin-top: 20px;
+    color: #fff; /* Cambiar el color del texto a blanco */
 }
 
 .gallery {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre filas */
+    gap: 50px; /* Espacio entre filas */
 }
 
 .gallery-row {
     display: flex;
     justify-content: center; /* Centrar los productos */
-    gap: 30px; /* Espacio entre productos */
+    gap: 50px; /* Espacio entre productos */
     animation: move-left 10s linear infinite; /* Animación hacia la izquierda */
 }
 
@@ -120,11 +124,20 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease; /* Transición para el efecto hover */
+    transition: transform 0.3s ease, z-index 0.3s ease; /* Transición para el efecto hover */
+    background-color: orange; /* Color de fondo naranja para los productos */
+    color: #fff; /* Cambiar el color del texto a blanco dentro del producto */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el producto */
+    padding: 20px; /* Espacio interno para los productos */
 }
 
 .producto:hover {
     transform: scale(2.2); /* Efecto de aumento al pasar el cursor */
+}
+
+.producto.selected {
+    z-index: 10; /* Eleva el contenedor seleccionado al frente */
+    transform: scale(2.5); /* Ajusta el tamaño del contenedor seleccionado */
 }
 
 .producto-imagen {
@@ -138,7 +151,7 @@ footer {
     padding: 10px;
     text-align: center;
     position: relative;
-    color: #030303; /* Color de texto */
+    color: #fff; /* Color de texto en el footer */
 }
 
 /* Animaciones para el movimiento de las filas */
