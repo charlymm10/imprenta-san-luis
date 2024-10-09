@@ -36,7 +36,7 @@ header {
 h1 {
     margin: -60px 0 20px; /* Ajusta el margen superior según sea necesario */
     font-size: 74px; /* Ajusta el tamaño de la fuente si es necesario */
-    color: #fff; /* Cambia el color del texto a blanco */
+    color: #ffffff; /* Cambia el color del texto a blanco */
     text-shadow: 
         0 0 5px #ffcc00, /* Resplandor amarillo */
         0 0 10px #ffcc00, 
@@ -100,7 +100,7 @@ h1 {
 .centered-content {
     text-align: center;
     margin-top: 20px;
-    color: #fff; /* Cambiar el color del texto a blanco */
+    color: #000000; /* Cambiar el color del texto a blanco */
 }
 
 .gallery {
@@ -126,9 +126,9 @@ h1 {
     overflow: hidden;
     transition: transform 0.3s ease, z-index 0.3s ease; /* Transición para el efecto hover */
     background-color: orange; /* Color de fondo naranja para los productos */
-    color: #fff; /* Cambiar el color del texto a blanco dentro del producto */
+    color: #ffffff; /* Cambiar el color del texto a blanco dentro del producto */
     cursor: pointer; /* Cambiar el cursor al pasar sobre el producto */
-    padding: 20px; /* Espacio interno para los productos */
+   
 }
 
 .producto:hover {
@@ -163,4 +163,7 @@ footer {
 @keyframes move-right {
     0% { transform: translateX(-100%); } /* Comenzar desde el lado izquierdo */
     100% { transform: translateX(100%); }
+}
+h2 {
+    margin-top: 40px; /* Ajusta según necesites */
 }
