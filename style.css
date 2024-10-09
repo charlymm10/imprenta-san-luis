@@ -77,38 +77,6 @@ h1 {
     display: flex;
     font-weight: bold; /* Hace el texto más grueso */
     flex-direction: column; /* Mostrar el teléfono y la dirección en columnas */
-    text-shadow: 
-    0 0 5px #ffcc00, /* Resplandor amarillo */
-    0 0 10px #ffcc00, 
-    0 0 15px #ffcc00,
-    0 0 20px #ffcc00,
-    0 0 25px #000000, /* Agrega más capas de brillo para dar efecto 3D */
-    2px 2px 0 #030303, /* Efecto 3D */
-    3px 3px 0 #010101; /* Efecto 3D adicional */
-animation: brillar 0.5s infinite alternate; /* Animación de brillo */
-}
-
-@keyframes brillar {
-from {
-    text-shadow: 
-        0 0 5px #ffcc00,
-        0 0 10px #ffcc00, 
-        0 0 15px #ffcc00,
-        0 0 20px #ffcc00,
-        0 0 25px #ffcc00,
-        2px 2px 0 #ffcc00,
-        3px 3px 0 #080808; /* Efecto 3D en el inicio */
-}
-to {
-    text-shadow: 
-        0 0 15px #ffcc00,
-        0 0 20px #ffcc00, 
-        0 0 25px #ffcc00,
-        0 0 30px #ffcc00,
-        0 0 35px #ffcc00,
-        2px 2px 0 #ffcc00,
-        3px 3px 0 #070707; /* Efecto 3D al final */
-}
 }
 
 .contacto p {
@@ -162,7 +130,7 @@ to {
 .producto-imagen {
     width: 100%; /* Imágenes escalables */
     height: auto; /* Mantener proporciones */
-    max-height: 50px; /* Limitar altura */
+    max-height: 80px; /* Limitar altura */
 }
 
 footer {
