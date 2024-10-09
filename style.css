@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff; /* Color de fondo de la página */
+    background-color: #260c0c; /* Color de fondo de la página */
+    color: #fff; /* Color del texto blanco para contraste */
 }
 
 header {
@@ -100,7 +101,7 @@ h1 {
 .centered-content {
     text-align: center;
     margin-top: 20px;
-    color: #000000; /* Cambiar el color del texto a blanco */
+    color: #ffffff; /* Cambiar el color del texto a blanco */
 }
 
 .gallery {
